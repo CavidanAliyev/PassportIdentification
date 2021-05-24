@@ -1,0 +1,199 @@
+<div className="container" >
+        <
+      div style={
+            {
+              marginBottom: 40
+            }
+          } > < /div> <
+      div className="col-md-5 col-md-offset-3"
+            style={
+              {
+                backgroundColor: '#fff',
+                borderRadius: '10px'
+              }
+            } >
+            <
+      div className="text-center" > < h3 > {
+                translate('title_check_passport')
+              } < /h3> <
+      div className="text-center"
+                style={
+                  {
+                    marginBottom: 50
+                  }
+                } >
+                  <
+      button className="btn btn-default"
+                    onClick={
+                      () => this.changeLang("az")
+                    } > az < /button> <
+      button className="btn btn-default"
+                      onClick={
+                        () => this.changeLang("en")
+                      } > en < /button> <
+      button className="btn btn-default"
+                        onClick={
+                          () => this.changeLang("ru")
+                        } > ru < /button> < /
+      div > <
+      /div> <
+      div className="col-md-12"
+                          style={
+                            {
+                              marginBottom: 50
+                            }
+                          } >
+                          <
+      form onSubmit={
+                              (e) => this.handleSubmit(e)
+                            } >
+                            <
+      div style={
+                                {
+                                  marginBottom: 20
+                                }
+                              } >
+                              <
+      label > {
+                                  translate('title_enter_passport')
+                                } < /label> <
+                                  input type="text"
+                                  className="form-control"
+                                  id="mrzPart1"
+                                  style={
+                                    {
+                                      fontFamily: 'monospace'
+                                    }
+                                  }
+                                  placeholder={
+                                    translate('placeholder_passport_mrz_part1')
+                                  }
+                                  value={
+                                    this.state.mrzPart1
+                                  }
+                                  onChange={
+                                    (event) => this.handleChange(event.target.value)
+                                  }
+                                /> <
+                                  input type="text"
+                                  className="form-control"
+                                  id="mrzPart2"
+                                  maxLength="44"
+                                  style={
+                                    {
+                                      fontFamily: 'monospace'
+                                    }
+                                  }
+                                  placeholder={
+                                    translate('placeholder_passport_mrz_part2')
+                                  }
+                                  value={
+                                    this.state.mrzPart2
+                                  }
+                                  onChange={
+                                    (event) => this.setState({
+                                      mrzPart2: event.target.value
+                                    })
+                                  }
+                                /> < /
+      div >
+                          
+      <
+      button type="submit"
+                                  className="btn btn-default pull-right" > {
+                                    translate('button_submit')
+                                  } < /button> < /
+      form > <
+      /div> <
+      div className="col-md-12"
+                                    style={
+                                      {
+                                        marginBottom: 30,
+                                        fontSize: '15px'
+                                      }
+                                    } >
+                                    <
+      div > < label > {
+                                        translate('title_document_indicating')
+                                      }: < span style={
+                                        {
+                                          color: '#4150A3'
+                                        }
+                                      } > {
+                                            this.state.passportData.documentIndicating
+                                          } < /span></label > < /div> <
+      div > < label > {
+                                            translate('title_document_type')
+                                          }: < span style={
+                                            {
+                                              color: '#4150A3'
+                                            }
+                                          } > {
+                                                this.state.passportData.documentType
+                                              } < /span></label > < /div> <
+      div > < label > {
+                                                translate('title_issuing_state')
+                                              }: < span style={
+                                                {
+                                                  color: '#4150A3'
+                                                }
+                                              } > {
+                                                    this.state.passportData.issuingState
+                                                  } < /span></label > < /div> <
+      div > < label > {
+                                                    translate('title_person')
+                                                  }: < span style={
+                                                    {
+                                                      color: '#4150A3'
+                                                    }
+                                                  } > {
+                                                        this.state.passportData.personName
+                                                      } < /span></label > < /div> <
+      div > < label > {
+                                                        translate('title_passport_number')
+                                                      }: < span style={
+                                                        {
+                                                          color: '#4150A3'
+                                                        }
+                                                      } > {
+                                                            this.state.passportData.passportNumber
+                                                          } < /span></label > < /div> <
+      div > < label > {
+                                                            translate('title_gender')
+                                                          }: < span style={
+                                                            {
+                                                              color: '#4150A3'
+                                                            }
+                                                          } > {
+                                                                this.state.passportData.sex
+                                                              } < /span></label > < /div> <
+      div > < label > {
+                                                                translate('title_date_of_birth')
+                                                              }: < span style={
+                                                                {
+                                                                  color: '#4150A3'
+                                                                }
+                                                              } > {
+                                                                    this.getNewDateFormat(e => e = this.state.passportData.dateofBirth)
+                                                                  } < /span></label > < /div> <
+      div > < label > {
+                                                                    translate('title_expiration_date_of_passport')
+                                                                  }: < span style={
+                                                                    {
+                                                                      color: '#4150A3'
+                                                                    }
+                                                                  } > {
+                                                                        this.state.passportData.expirydate
+                                                                      } < /span></label > < /div> <
+      div > < label > {
+                                                                        translate('title_personal_number')
+                                                                      }: < span style={
+                                                                        {
+                                                                          color: '#4150A3'
+                                                                        }
+                                                                      } > {
+                                                                            this.state.passportData.personalNumber
+                                                                          } < /span></label > < /div> < /
+      div > <
+      /div> < /
+      div >
